@@ -30,3 +30,34 @@ function stringLength(inputString) {
 		return 'long string';
 	}
 }
+
+function startsWith(inputString) {
+	if(inputString.charAt(0) === 'a' || inputString.charAt(0) === 'A') {
+		return 'starts with A';
+	} 
+	else if(inputString.charAt(0) === 'b' || inputString.charAt(0) === 'B') {
+		return 'starts with B';
+	} 
+	else if(inputString.charAt(0) === 'c' || inputString.charAt(0) === 'C') {
+		return 'starts with C';
+	} 
+	else if(inputString.charAt(0) === 'd' || inputString.charAt(0) === 'D') {
+		return 'starts with D';
+	} 
+	else if(inputString.charAt(0) === 'e' || inputString.charAt(0) === 'E') {
+		return 'starts with E';
+	} 
+	else {
+		return 'starts with something else';
+	} 
+}
+
+function stringRepeat(s, n) {
+	n = parseFloat(n);
+	return Array((n)+1).join(s);
+}
+
+function join(values, separator) {
+	values = values.join(' '+separator+' ');
+	return values;
+}
