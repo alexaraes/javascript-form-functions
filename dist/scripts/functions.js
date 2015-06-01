@@ -1,24 +1,25 @@
-//5.5 + 7 --> 12.5
-//-3 + 0 --> -3
-//-7 + 10 --> 3
+///////FUNCTION ADD
 function add(a,b) {
 	a = parseFloat(a);
 	b = parseFloat(b);
 	return a + b;
 }
 
+///////FUNCTION SUBTRACT
 function subtract(a, b) {
 	a = parseFloat(a);
 	b = parseFloat(b);
 	return a - b;
 }
 
+///////FUNCTION TAX
 function tax(a, b) {
 	a = parseFloat(a);
 	b = parseFloat(b);
 	return a*(b/100);
 }
 
+///////FUNCTION STRINGLENGTH
 function stringLength(inputString) {
 	if(inputString.length < 5) {
 		return 'short string';
@@ -31,6 +32,7 @@ function stringLength(inputString) {
 	}
 }
 
+///////FUNCTION STARTSWITH
 function startsWith(inputString) {
 	if(inputString.charAt(0) === 'a' || inputString.charAt(0) === 'A') {
 		return 'starts with A';
@@ -52,12 +54,57 @@ function startsWith(inputString) {
 	} 
 }
 
+///////FUNCTION STRINGREPEAT
 function stringRepeat(s, n) {
 	n = parseFloat(n);
 	return Array((n)+1).join(s);
 }
 
+///////FUNCTION NSUM
+function nSum(inputString) {
+	var input = parseInt(inputString);
+	for (var i=0; i < input; i++) {
+		var newTotal = i +input;
+		var finalTotal = newTotal + input;
+	}
+	return finalTotal;
+}
+
+///////FUNCTION JOIN
 function join(values, separator) {
 	values = values.join(' '+separator+' ');
 	return values;
 }
+
+///////FUNCTION COUNTLETTERS
+function countLetters(inputString) {
+	var letterCount = {};
+
+	for (var i=0; i<inputString.length; i++) {
+
+		var currentLetter = inputString.charAt(i);
+		if(!letterCount.hasOwnProperty(currentLetter)) {
+			letterCount[currentLetter]=1;
+		}
+		else {
+			letterCount[currentLetter]++;
+		}
+	}
+	var outputString = '';
+
+	for (var propertyName in letterCount) {
+		var value = letterCount[propertyName];
+
+		outputString = outputString + propertyName + ':' + value + ',';
+	}
+
+	return outputString;
+}
+
+
+
+
+
+
+
+
